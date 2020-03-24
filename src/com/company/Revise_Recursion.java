@@ -19,7 +19,7 @@ public class Revise_Recursion {
             ArrayList<String> baseResult = new ArrayList<>();
             baseResult.add("");
             return baseResult;
-
+            //base_neg
         }else if(cr > BOARDDIMESTIONS || cc > BOARDDIMESTIONS){
             //Out of Bounds
             ArrayList<String> baseResult = new ArrayList<>();
@@ -27,7 +27,7 @@ public class Revise_Recursion {
         }
 
 
-            //base_neg
+
 
 
             //loops to add element ot master if found will receive from all calls
@@ -48,7 +48,14 @@ public class Revise_Recursion {
             master.add("V"+rRVS);
         }
 
-        
+        ArrayList<String> rRD = mazePath(cr+1,cc+1,er,ec,BOARDDIMESTIONS);
+        //loop1
+        for(String rRDS:rRD){
+            //For Each String in ArrayList
+            master.add("D"+rRDS);
+        }
+
+
 
 
 
