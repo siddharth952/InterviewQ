@@ -11,7 +11,9 @@ public class Revise_Recursion {
 //
 //        System.out.println(res);
 //
-        ques1_A(5,5);
+//
+
+        ques2_A(5,1,1);
 
     }
 
@@ -94,8 +96,27 @@ public class Revise_Recursion {
         System.out.print(N+1+",");
     }
 
+    public static void ques2_A(int N, int curr,int parent){
+        /*
+        Take as input N, a number. Print the following pattern (for N = 5)
+                    *
+                    **
+                    ***
+                    ****
+                    *****
+         */
+        if(curr == 0){
+            return;
+        }
+        if(curr>N){
+            return;
+        }
+        ques2_A(N,curr-1,parent);
+        System.out.print("* ");
 
-
-
-
+        if(curr == parent) {
+            System.out.print("\n");
+            ques2_A(N, curr + 1,parent+1);
+        }
+    }
 }
