@@ -13,56 +13,53 @@ public class Revise_Recursion {
 //
 //
 
-        ques2_A(5,1,1);
+        ques2_A(5, 1, 1);
 
     }
 
 
-    public static ArrayList<String> mazePath(int cr, int cc, int er, int ec,int BOARDDIMESTIONS){
+    public static ArrayList<String> mazePath(int cr, int cc, int er, int ec, int BOARDDIMESTIONS) {
         //base_pos
-        if(cr == er && cc == ec){
+        if (cr == er && cc == ec) {
             ArrayList<String> baseResult = new ArrayList<>();
             baseResult.add("");
             return baseResult;
             //base_neg
-        }else if(cr > BOARDDIMESTIONS || cc > BOARDDIMESTIONS){
+        } else if (cr > BOARDDIMESTIONS || cc > BOARDDIMESTIONS) {
             //Out of Bounds
             ArrayList<String> baseResult = new ArrayList<>();
             return baseResult;
         }
 
 
-
-
-
-            //loops to add element ot master if found will receive from all calls
-            ArrayList<String> master = new ArrayList<>();
+        //loops to add element ot master if found will receive from all calls
+        ArrayList<String> master = new ArrayList<>();
         //recursionResult for Vertical call
-        ArrayList<String> rRH = mazePath(cr,cc+1,er,ec,BOARDDIMESTIONS);
+        ArrayList<String> rRH = mazePath(cr, cc + 1, er, ec, BOARDDIMESTIONS);
         //loop1
-        for(String rRHS:rRH){
+        for (String rRHS : rRH) {
             //For Each String in ArrayList
-            master.add("H"+rRHS);
+            master.add("H" + rRHS);
         }
 
         //recursionResult for Vertical call
-        ArrayList<String> rRV = mazePath(cr+1,cc,er,ec,BOARDDIMESTIONS);
+        ArrayList<String> rRV = mazePath(cr + 1, cc, er, ec, BOARDDIMESTIONS);
         //loop2
-        for(String rRVS:rRV){
+        for (String rRVS : rRV) {
             //For Each String in ArrayList
-            master.add("V"+rRVS);
+            master.add("V" + rRVS);
         }
 
-        ArrayList<String> rRD = mazePath(cr+1,cc+1,er,ec,BOARDDIMESTIONS);
+        ArrayList<String> rRD = mazePath(cr + 1, cc + 1, er, ec, BOARDDIMESTIONS);
         //loop1
-        for(String rRDS:rRD){
+        for (String rRDS : rRD) {
             //For Each String in ArrayList
-            master.add("D"+rRDS);
+            master.add("D" + rRDS);
         }
-    return master;
+        return master;
     }
 
-    public static void eggDrop(){
+    public static void eggDrop() {
         /*
         You are given K eggs, and you have access to a building with N floors from 1 to N.
 
@@ -78,25 +75,24 @@ public class Revise_Recursion {
          */
 
 
-
     }
 
-    public static void ques1_A(int N,int end){
+    public static void ques1_A(int N, int end) {
         /*
         Take as input N, a number. Print odd numbers in decreasing sequence
         (up until 0) and even numbers in increasing sequence (up until N).
         E.g. for N = 6 print 5, 3, 1, 2, 4.
          */
-        if(N <= 0){
+        if (N <= 0) {
             return;
         }
-        System.out.print(N+",");
-        ques1_A(N-2,end);
-        if(N != end)
-        System.out.print(N+1+",");
+        System.out.print(N + ",");
+        ques1_A(N - 2, end);
+        if (N != end)
+            System.out.print(N + 1 + ",");
     }
 
-    public static void ques2_A(int N, int curr,int parent){
+    public static void ques2_A(int N, int curr, int parent) {
         /*
         Take as input N, a number. Print the following pattern (for N = 5)
                     *
@@ -105,18 +101,43 @@ public class Revise_Recursion {
                     ****
                     *****
          */
-        if(curr == 0){
+        if (curr == 0) {
             return;
         }
-        if(curr>N){
+        if (curr > N) {
             return;
         }
-        ques2_A(N,curr-1,parent);
+        ques2_A(N, curr - 1, parent);
         System.out.print("* ");
 
-        if(curr == parent) {
+        if (curr == parent) {
             System.out.print("\n");
-            ques2_A(N, curr + 1,parent+1);
+            ques2_A(N, curr + 1, parent + 1);
         }
+    }
+
+    public static void ques3_A(int N, int curr, int parent) {
+        /*
+        Take as input N, a number. Print the following pattern (for N = 5)
+                *****
+                ****
+                ***
+                **
+                *
+         */
+        if (curr == 0) {
+            return;
+        }
+        if (curr > N) {
+            return;
+        }
+        ques3_A(N, curr - 1, parent);
+        System.out.print("* ");
+
+        if (curr == parent) {
+            System.out.print("\n");
+            ques3_A(N, curr + 1, parent + 1);
+        }
+
     }
 }
