@@ -1,6 +1,7 @@
 package com.company;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -9,6 +10,8 @@ public class Lecture16 {
     public static void main(String[] args) {
 
         int[] arr = {3,6,4,1,2};
+        ArrayList<Integer> n = new ArrayList<>();
+        n.
         System.out.println(Arrays.toString(divide(arr)));
     }
 

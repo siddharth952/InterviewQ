@@ -12,8 +12,11 @@ public class StackClient {
             System.out.print(stack.pop());
             System.out.print(stack.pop());
         }
-        catch (Exception e){
-            System.out.println(e.fillInStackTrace());
+//        catch (Exception e){
+//            System.out.println(e.fillInStackTrace());
+//        }
+        finally {
+            System.out.println("Hello");
         }
 
     }
