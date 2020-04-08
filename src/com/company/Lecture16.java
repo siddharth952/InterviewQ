@@ -11,8 +11,8 @@ public class Lecture16 {
 
         int[] arr = {3,6,4,1,2};
         ArrayList<Integer> n = new ArrayList<>();
-        n.
-        System.out.println(Arrays.toString(divide(arr)));
+//        n.
+//        System.out.println(Arrays.toString(divide(arr)));
     }
 
 
