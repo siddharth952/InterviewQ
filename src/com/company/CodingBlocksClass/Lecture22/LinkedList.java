@@ -1,4 +1,4 @@
-package com.company.Lecture22;
+package com.company.CodingBlocksClass.Lecture22;
 
 public class LinkedList {
     private Node head;

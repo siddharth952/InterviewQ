@@ -1,4 +1,4 @@
-package com.company;
+package com.company.CodingBlocksClass;
 
 public class Lecture14 {
 

@@ -1,4 +1,4 @@
-package com.company.lecture19;
+package com.company.CodingBlocksClass.lecture19;
 
 public class StackClient {
 
