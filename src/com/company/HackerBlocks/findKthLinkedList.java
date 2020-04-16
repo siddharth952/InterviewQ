@@ -26,6 +26,7 @@ public class findKthLinkedList {
 
     public static void findKthEnd(LinkedList givenList,int fromEnd){
         System.out.println(givenList);
+        
         Iterator itRev = givenList.descendingIterator();
         for(int i = 1;i<fromEnd;i++)
             itRev.next();
