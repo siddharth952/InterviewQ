@@ -7,16 +7,16 @@ public class toLowerCase {
         toLowerCase("TestSTSDDD sDF!wD");
     }
 
-    public static void toLowerCase(String input){
+    public static String toLowerCase(String input){
         char[] arr = input.toCharArray();
        for(char ch : arr){
            if(ch>='A' && ch<='Z'){
                //Change to lower
                ch = (char) (ch - 'A' + 'a'); //Sub till A then new offset a
            }
-           System.out.println(ch);
-       }
 
+       }
+        return new String(arr);
 
     }
 }
