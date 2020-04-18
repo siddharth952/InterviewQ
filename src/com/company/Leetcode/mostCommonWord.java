@@ -1,16 +1,20 @@
 package com.company.Leetcode;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class mostCommonWord {
     //Given a paragraph, list of banned words, return most frequent word that is not banned
 
     public static void main(String[] args) {
         String[] test = {"ball","tall"};
-        System.out.println(mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", test));
+        //System.out.println(mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", test));
+
+
+    Map<String, int[]> map = new HashMap<>();
+    map.put("Apple", new int[]{2, 3, 4});
+        System.out.println(Arrays.toString(map.get("Apple")));
+        int[] update = {};
+        map.replace("Apple",map.get("Apple"));
     }
 
     public static String mostCommonWord(String para,String[] banned){

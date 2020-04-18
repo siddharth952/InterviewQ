@@ -10,6 +10,7 @@ public class TreeClient {
         genericTrees.insert(s);
         genericTrees.display();
 
+
         //System.out.println(genericTrees.count());
         genericTrees.atlevel(1);
         genericTrees.levelOrder();
