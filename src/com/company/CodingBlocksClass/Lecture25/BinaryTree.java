@@ -54,7 +54,6 @@ public class BinaryTree {
         displayPost(node.left,indent+"\t");
         displayPost(node.right,indent+"\t");
         System.out.println(indent+node.value);
-
     }
 
 
@@ -88,7 +87,7 @@ public class BinaryTree {
 
     private int diameter(Node node) {
         if(node == null) return 0;
-        int current = 1 + height(node.left) + height(node.right);
+        int current = height(node.left) + height(node.right);
         int max = Math.max(diameter(node.left),diameter(node.right));
         return Math.max(current,max);
     }
