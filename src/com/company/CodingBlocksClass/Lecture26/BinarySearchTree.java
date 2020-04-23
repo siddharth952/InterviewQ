@@ -66,8 +66,7 @@ public class BinarySearchTree {
 
         while (curr != null) {
             if (curr.value > val) {
-                if (succ == null || curr.value < succ.value)
-                    succ = curr;
+                if (succ == null || curr.value < succ.value) {succ = curr;}
 
                 curr = curr.left;
             } else {
@@ -140,12 +139,12 @@ public class BinarySearchTree {
         int[] inOrder_Left = Arrays.copyOfRange(in,0,index);
         int[] inOrder_Right = Arrays.copyOfRange(in,index+1,in.length);
 
-//        Node newNode = new Node(val);
+        Node newNode = new Node(val);
 //        Node left = makeFromPre_and_In();
 //        Node right = makeFromPre_and_In();
 
         
-
+        return newNode;
     }
 
     private int find(int[] in, int val) {
