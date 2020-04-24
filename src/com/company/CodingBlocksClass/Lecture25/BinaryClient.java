@@ -15,9 +15,9 @@ public class BinaryClient {
         tree.insert(s);
         tree.insert(s);
         tree.insert(s);
-        //tree.displayPost();
-        System.out.println(tree.height());
-        System.out.println(tree.diameter());
+        tree.displayPost();
+//        System.out.println(tree.height());
+//        System.out.println(tree.diameter());
 
     }
 }
