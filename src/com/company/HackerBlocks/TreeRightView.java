@@ -8,7 +8,7 @@ import java.util.*;
             BinaryTrees binarytree = new BinaryTrees();
 
             int arr[];
-            while(input )
+
         }
     }
     class BinaryTrees{

@@ -119,26 +119,19 @@ public class Main {
 
     private static void subseq(String p, String u) {
         //base case
-
         if (u.isEmpty()) {
             System.out.println(p);
             //out.si
             return;
         }
-
-
         char ch = u.charAt(0);  //A <- B  C
         u = u.substring(1);
 
         //left
-
         subseq(p + ch, u);
 
         //right
-
         subseq(p, u);
-
-
     }
 
     public static void to_HHH(String processed, String unprocessed) {
