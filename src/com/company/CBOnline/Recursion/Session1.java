@@ -5,8 +5,20 @@ import java.util.*;
 public class Session1 {
 
     public static void main(String[] args) {
-        //subSeq("abc","");
-       System.out.println(genPermutation("abc"));
+        subSeq("abcd","");
+      // System.out.println(genPermutation("abc"));
+
+
+       //
+        int[] arr = {1,2,3};
+
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int a :arr)  {
+            arrayList.add(a);
+        }
+
+        alternatingSubseq(arrayList,"");
+
     }
 
     public static void subSeq(String u, String p){
@@ -57,8 +69,34 @@ public class Session1 {
             }
         }
         return mr;
+    }
 
+
+    public static void alternatingSubseq(ArrayList<Integer> arr,String processed){
+        if(arr.isEmpty()) {
+            System.out.println(processed);
+            return;
+        }
+
+        int first = arr.get(0);
+        arr.remove(0);
+
+        //Left we add
+        alternatingSubseq(arr,processed+first);
+
+        while(first>2)
+            first = Math.max(2,4);
+
+
+
+
+
+        //Right do not add
+        alternatingSubseq(arr,processed);
 
     }
+
+
+
 
 }

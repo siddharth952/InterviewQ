@@ -8,12 +8,12 @@ public class TreeClient {
         Scanner s = new Scanner(System.in);
         GenericTrees genericTrees = new GenericTrees();
         genericTrees.insert(s);
-        genericTrees.display();
+       // genericTrees.display();
 
 
         //System.out.println(genericTrees.count());
         genericTrees.atlevel(1);
-        genericTrees.levelOrder();
+        //genericTrees.levelOrder();
     }
 
 
