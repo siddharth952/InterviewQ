@@ -32,25 +32,33 @@ public class Session1 {
     public static ArrayList<String> genPermutation(String str){
         // Base
         if(str.length() == 0){
+            // Return an "" string such that we run outer loop once
             ArrayList<String> br = new ArrayList<>();
             br.add("");
             return br;
-         }
 
+        }
+        //Take out first char abc - a bc
         char ch = str.charAt(0);
         String ros = str.substring(1);
 
-        ArrayList<String> rr = genPermutation(ros);
-        ArrayList<String> myResult = new ArrayList<>();
+        // Catch all results in arraylist
+        ArrayList<String> recursionR;
+        recursionR = genPermutation(ros);
 
-        // Adding char at i
-        for(String s:rr){
-            for(int i = 0;i<=s.length();i++) {
-                String val = s.substring(0, i) + ch + s.substring(i);
-                myResult.add(val);
+        ArrayList<String> mr = new ArrayList<>();
+
+        for(String s:recursionR){
+
+            for(int i=0;i<=s.length();i++){
+                // Cannot have s = s.substring(0,i) + ch + s.substring(i); as we are loop2 ing throgh it cannot change that.
+                String val = s.substring(0,i) + ch + s.substring(i);
+                mr.add(val);
             }
         }
-        return myResult;
+        return mr;
+
+
     }
 
 }
