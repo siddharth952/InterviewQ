@@ -17,6 +17,5 @@ public class WrongSubtraction {
             }
         }
         System.out.println(n);
-
     }
 }
