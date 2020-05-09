@@ -157,7 +157,7 @@ public class AdjacencyMapGraph<T> {
 
 
 
-
+            return 2;
 
         }
 
